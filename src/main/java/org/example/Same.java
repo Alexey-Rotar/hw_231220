@@ -1,5 +1,5 @@
 /*
-Напишите обобщенный метод compareArrays(), который принимает два массива и возвращает true,
+2. Напишите обобщенный метод compareArrays(), который принимает два массива и возвращает true,
 если они одинаковые, и false в противном случае. Массивы могут быть любого типа данных,
 но должны иметь одинаковую длину и содержать элементы одного типа попарно.
 */
@@ -8,18 +8,18 @@ package org.example;
 
 import java.util.ArrayList;
 
-public class Checker {
+public class Same {
 
     public static void main(String[] args) {
         ArrayList<Object> a1 = new ArrayList<>();
         ArrayList<Object> a2 = new ArrayList<>();
         ArrayList<Object> a3 = new ArrayList<>();
 
-        a1.add("First array");
-        a1.add(456123);
-        a1.add(5.78F);
-        a1.add('a');
-        a1.add(20.034D);
+        a1.add("First array"); // String
+        a1.add(456123);        // Integer
+        a1.add(5.78F);         // Float
+        a1.add('a');           // Character
+        a1.add(20.034D);       // Double
 
         a2.add(new String("Second array"));
         a2.add(new Integer(9));
@@ -33,9 +33,9 @@ public class Checker {
         a3.add('c');
         a3.add(78D);
 
-        System.out.println("Check for a1 and a2: " + compareArrays(a1, a2));
-        System.out.println("Check for a1 and a3: " + compareArrays(a1, a3));
-        System.out.println("Check for a2 and a3: " + compareArrays(a1, a3));
+        System.out.println("Массивы a1 и a2 одинаковые - " + compareArrays(a1, a2));
+        System.out.println("Массивы a1 и a3 одинаковые - " + compareArrays(a1, a3));
+        System.out.println("Массивы a1 и a3 одинаковые - " + compareArrays(a1, a3));
     }
 
     public static <A1, A2> boolean compareArrays(ArrayList<A1> a1, ArrayList<A2> a2) {
